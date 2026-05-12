@@ -91,10 +91,13 @@ else()
 endif()
 
 # Build conpty-proxy
+# forkしたので、tagが無くなった.
+# ExternalProject_addはGIT_TAGの指定がない場合、masterブランチをクローンする
+# だが、2026年のデフォルト設定は通常 main となる
 if(WIN32)
   ExternalProject_add(conpty-proxy
     GIT_REPOSITORY https://github.com/IwachanOrigin/conpty-proxy.git
-    GIT_TAG v1.0.1
+    GIT_TAG main
     INSTALL_DIR ${CMAKE_CURRENT_SOURCE_DIR}
     INSTALL_COMMAND
     COMMAND ${CMAKE_COMMAND} -E copy

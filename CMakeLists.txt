@@ -93,7 +93,7 @@ endif()
 # Build conpty-proxy
 if(WIN32)
   ExternalProject_add(conpty-proxy
-    GIT_REPOSITORY https://github.com/xhcoding/conpty-proxy.git
+    GIT_REPOSITORY https://github.com/IwachanOrigin/conpty-proxy.git
     GIT_TAG v1.0.1
     INSTALL_DIR ${CMAKE_CURRENT_SOURCE_DIR}
     INSTALL_COMMAND
